@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: bb-site
-        image: docker.io/johngatdocker2022/todoapp:latest
+        image: docker.io/johngatdocker2022/todoapp:v2
         imagePullPolicy: Always
 ---
 apiVersion: v1
