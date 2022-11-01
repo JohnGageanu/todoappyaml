@@ -21,7 +21,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: todoapp-entrypoint
+  name: bb-entrypoint
   namespace: todoapp
 spec:
   type: LoadBalancer
