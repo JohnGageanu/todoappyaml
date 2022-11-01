@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: todoapp-demo
+  name: bb-demo
   namespace: todoapp
 spec:
   replicas: 1
@@ -14,7 +14,7 @@ spec:
         bb: web
     spec:
       containers:
-      - name: todoappcontainer
+      - name: bb-site
         image: docker.io/johngatdocker2022/todoapp:latest
         imagePullPolicy: Always
 ---
