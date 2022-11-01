@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todoapp-demo
+  namespace: todoapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      bb: web
+  template:
+    metadata:
+      labels:
+        bb: web
+    spec:
+      containers:
+      - name: todoappcontainer
+        image: docker.io/johngatdocker2022/todoapp:latest
+        imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: todoapp-entrypoint
+  namespace: todoapp
+spec:
+  type: LoadBalancer
+  selector:
+    bb: web
+  ports:
+  - port: 80
+    targetPort: 3000
